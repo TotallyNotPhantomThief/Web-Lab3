@@ -1,4 +1,4 @@
- function calculateClassAvarage(students,courseId){
+ export function calculateClassAvarage(students,courseId){
 let totalAvg = 0;
 for(let i=0; i<students.length; i++){
 totalAvg += students[i].getAvarage(courseId);
@@ -7,7 +7,7 @@ return totalAvg/students.length;
  
 }
 
-function findTopStudents(students){
+export function findTopStudents(students){
  const topStudent = students.reduce((highestStu, curStu) => {
     return (curStu.getAvarage() > highestStu.getAvarage() ? curStu : highestStu);
  }) 
@@ -15,6 +15,6 @@ function findTopStudents(students){
 }
 
 
-filterStudents(students, criteriaFn){
-    
+export function filterStudents(students, criteriaFn){
+    return students.filterStudents(criteriaFn);
 }
