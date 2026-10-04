@@ -1,4 +1,4 @@
-function fetchStudents(callback){
+export function fetchStudents(callback){
     setTimeout(() => {
         const students = [
             {id: 1, name: "Ali", courses: [{ courseId: 101, grade: 90}, {courseId: 102, grade: 85}]},
@@ -7,5 +7,5 @@ function fetchStudents(callback){
         ];
         callback(students);
     }, 2000);
-        
+        console.log("Data fetched.");
 }
