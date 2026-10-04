@@ -1,6 +1,6 @@
 class Student{
 constructor(name,id, courses = []){
- Obeject.defineProperty(this,id,{
+ Object.defineProperty(this,'id',{
     value: id,
     writable: false,
     enumerable: true,
@@ -14,6 +14,9 @@ this.courses.push({courseId, grade});
 }
 getAvarage(){
 let total = 0;
+if(this.courses.length === 0){
+return 0;
+}
 for(let i = 0; i< this.courses.length; i++){
 total += this.courses[i].grade;
 }
