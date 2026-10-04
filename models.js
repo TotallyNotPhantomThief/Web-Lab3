@@ -1,4 +1,4 @@
-class Student{
+ export class Student{
 constructor(name,id, courses = []){
  Object.defineProperty(this,'id',{
     value: id,
@@ -9,10 +9,11 @@ constructor(name,id, courses = []){
 this.name = name;
 this.courses = courses;
 }
-addCourse(courseId, grade){
+}
+ export function addCourse(courseId, grade){
 this.courses.push({courseId, grade});
 }
-getAvarage(){
+export function getAvarage(){
 let total = 0;
 if(this.courses.length === 0){
 return 0;
@@ -27,4 +28,3 @@ return total/this.courses.length;
 
 
 
-}
