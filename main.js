@@ -2,7 +2,7 @@ import {Student, addCourse,getAvarage} from './models.js';
 import {calculateClassAvarage, findTopStudents, filterStudents} from './analytics.js';
 import {fetchStudents} from './database.js';
  fetchStudents((student)=>{
-    conlsole.log("Fetching data from database...");
+    console.log("Fetching data from database...");
 
 
     const Students = student.map(data => new Student(data.name, data.id, data.courses));
