@@ -9,11 +9,11 @@ constructor(name,id, courses = []){
 this.name = name;
 this.courses = courses;
 }
-}
- export function addCourse(courseId, grade){
+
+ addCourse(courseId, grade){
 this.courses.push({courseId, grade});
 }
-export function getAvarage(){
+ getAvarage(){
 let total = 0;
 if(this.courses.length === 0){
 return 0;
@@ -24,7 +24,7 @@ total += this.courses[i].grade;
 return total/this.courses.length;
 }
 
-
+}
 
 
 

@@ -1,4 +1,4 @@
- export function calculateClassAvarage(students,courseId){
+export function calculateClassAvarage(students,courseId){
 let totalAvg = 0;
 for(let i=0; i<students.length; i++){
 totalAvg += students[i].getAvarage(courseId);
@@ -16,5 +16,5 @@ export function findTopStudents(students){
 
 
 export function filterStudents(students, criteriaFn){
-    return students.filterStudents(criteriaFn);
+    return students.filter(criteriaFn);
 }
